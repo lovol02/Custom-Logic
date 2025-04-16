@@ -1,0 +1,297 @@
+    {
+        "type": "atoms",
+        "message0": "atoms %1",
+        "args0":[
+          {
+            "type": "field_input",
+            "name": "FIELDNAME",
+            "text": ""
+          }
+        ],
+        "previousStatement": "atoms",
+        //  "nextStatement": ["atoms","container"],
+        'colour': 200
+    },
+    {
+      "type": "agents",
+      "message0": "agent %1",
+      "args0":[
+        {
+          "type": "field_input",
+          "name": "FIELDNAME",
+          "text": ""
+        }
+      ],
+      "previousStatement": "agents",
+      "nextStatement": ["agents"],
+      "colour": 130
+  },/*
+    {
+        "type": "container",
+        "message0": " %1 %2 ",
+        "args0": [
+        {
+            "type": "field_label",
+            "name": "FieldName",
+            "text": "F"
+        },
+        {
+            "type": "input_statement",
+            "name": "ATOMS",
+            "check": ["atoms","container","agents"]
+        }
+        ],
+        //"output": null,
+        "previousStatement": "container",
+        //"nextStatement": ["atoms","container"],
+        "colour": 230,
+    },
+    {
+      "type": "container1",
+      "message0": " %1",
+      "message1": "%1",
+      "args0": [
+      {
+          "type": "field_label",
+          "name": "FieldName",
+          "text": "G"
+      }],
+      "args1":[
+      {
+          "type": "input_statement",
+          "name": "ATOMS",
+          "check": ["agents"]
+      }
+      ],
+      //"output": null,
+      "previousStatement": "container1",
+      //"nextStatement": ["atoms","container"],
+      "colour": 230,
+  },*/
+  {
+      "type": "container2",
+      "message0": " %1",
+      "message1": "%1",
+      "message2": "%1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "input_camp1",
+        //"check": ["atoms","agents"]
+        "check": all_but_agents
+
+      }],
+      "args1":[
+      {
+          "type": "field_label",
+          "name": "FieldName",
+          "text": "^"
+      }
+      ],
+      "args2": [
+        {
+          "type": "input_statement",
+          "name": "input_camp2",
+          //"check": ["atoms","agents"]
+          "check": all_but_agents
+  
+        }],
+      //"output": null,
+      "previousStatement": "container2",
+      //"nextStatement": null,
+      "colour": 230,
+  },
+  {
+    "type": "container3",
+      "message0": " %1",
+      "message1": "%1",
+      "message2": "%1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "input_camp1",
+        //"check": ["atoms","agents"]
+        "check": all_but_agents
+
+      }],
+      "args1":[
+      {
+          "type": "field_label",
+          "name": "FieldName",
+          "text": "v"
+      }
+      ],
+      "args2": [
+        {
+          "type": "input_statement",
+          "name": "input_camp2",
+          //"check": ["atoms","agents"]
+          "check": all_but_agents
+  
+        }],
+      //"output": null,
+      "previousStatement": "container3",
+      //"nextStatement": null,
+      "colour": 230,
+  },
+  {
+    "type": "container4",
+      "message0": " %1",
+      "message1": "%1",
+      "args1": [
+      {
+        "type": "input_statement",
+        "name": "input_camp1",
+        //"check": ["atoms","agents"]
+        "check": all_but_agents
+
+      }],
+      "args0":[
+      {
+          "type": "field_label",
+          "name": "FieldName",
+          "text": "NOT"
+      }
+      ],
+      //"output": null,
+      "previousStatement": "container4",
+      //"nextStatement": null,
+      "colour": 230,
+  },
+  {
+    "type": "container5",
+      "message0": " %1",
+      "message1": "%1",
+      "message2": "%1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "agentscamp",
+        "check": ["agents"]
+
+      }],
+      "args1":[
+      {
+          "type": "field_label",
+          "name": "FieldName",
+          "text": "G"
+      }
+      ],
+      "args2": [
+        {
+          "type": "input_statement",
+          "name": "input_camp2",
+          //"check": ["atoms","agents"]
+          "check": all_but_agents
+  
+        }],
+      //"output": null,
+      "previousStatement": "container5",
+      //"nextStatement": null,
+      "colour": 230,
+  },
+  {
+    "type": "container6",
+      "message0": " %1",
+      "message1": "%1",
+      "message2": "%1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "agentscamp",
+        "check": ["agents"]
+
+      }],
+      "args1":[
+      {
+          "type": "field_label",
+          "name": "FieldName",
+          "text": "X"
+      }
+      ],
+      "args2": [
+        {
+          "type": "input_statement",
+          "name": "input_camp2",
+          //"check": ["atoms","agents"]
+          "check": all_but_agents
+  
+        }],
+      //"output": null,
+      "previousStatement": "container6",
+      //"nextStatement": null,
+      "colour": 230,
+  },
+  {
+    "type": "container7",
+      "message0": " %1",
+      "message1": "%1",
+      "message2": "%1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "agentscamp",
+        "check": ["agents"]
+
+      }],
+      "args1":[
+      {
+          "type": "field_label",
+          "name": "FieldName",
+          "text": "F"
+      }
+      ],
+      "args2": [
+        {
+          "type": "input_statement",
+          "name": "input_camp2",
+          //"check": ["atoms","agents"]
+          "check": all_but_agents
+  
+        }],
+      //"output": null,
+      "previousStatement": "container7",
+      //"nextStatement": null,
+      "colour": 230,
+  },
+  {
+    "type": "container8",
+      "message0": " %1",
+      "message1": "%1",
+      "message2": "%1",
+      "message3": "%1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "agentscamp",
+        "check": ["agents"]
+
+      }],
+      "args1": [
+        {
+          "type": "input_statement",
+          "name": "input_camp1",
+          //"check": ["atoms","agents"]
+          "check": all_but_agents
+  
+        }],
+      "args2":[
+      {
+          "type": "field_label", 
+          "name": "FieldName",
+          "text": "v"
+      }
+      ],
+      "args3": [
+        {
+          "type": "input_statement",
+          "name": "input_camp2",
+          //"check": ["atoms","agents"]
+          "check": all_but_agents
+  
+        }],
+      //"output": null,
+      "previousStatement": "container8",
+      //"nextStatement": null,
+      "colour": 230,
+  },

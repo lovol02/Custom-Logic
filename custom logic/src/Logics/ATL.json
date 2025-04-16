@@ -1,0 +1,58 @@
+[
+    {
+        "type": "collector",
+        "contents":[
+            {
+                "name": "all",
+                "elements": ["atom","AND","OR","NOT","G","X","F","agents"]
+            },
+            {
+                "name": "all_but_agents",
+                "elements": ["atom","AND","OR","NOT","G","X","F"]                
+            }
+        ]
+    },
+    {
+        "type": "prototype",
+        "contents": [
+            {
+                "name":"agent",
+                "format":"%string",
+                "connection":"agent"
+            },
+            {
+                "name":"atom",
+                "format":"%string"
+            }
+        ]
+    },
+    {
+        "type": "advancedtype",
+        "contents":[
+		{
+            "name": "OR",
+            "format":"%['all_but_agents'] v %['all_but_agents']"
+        },
+        {
+            "name": "AND",
+            "format":"%['all_but_agents'] ^ %['all_but_agents']"
+        },
+        {
+            "name": "NOT",
+            "format":"NOT %['all_but_agents']"
+        },
+        {
+            "name": "G",
+            "format":"<<%['agent']>> G %['all_but_agents']"
+        },
+        {
+            "name": "X",
+            "format":"<<%['agent']>> X %['all_but_agents']"
+        },
+        {
+            "name": "F",
+            "format":"<<%['agent']>> F %['all_but_agents']"
+        }
+	]
+    }
+]

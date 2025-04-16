@@ -1,0 +1,386 @@
+[
+  {
+    "type": "agent",
+    "message0": "agent",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_input",
+        "text": "",
+        "name": "name1"
+      }
+    ],
+    "previousStatement": "agent",
+    "colour": "221",
+    "nextStatement": [
+      "agent"
+    ]
+  },
+  {
+    "type": "atom",
+    "message0": "atom",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_input",
+        "text": "",
+        "name": "name1"
+      }
+    ],
+    "previousStatement": "atom",
+    "colour": "103"
+  },
+  {
+    "type": "bound",
+    "message0": "bound",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_number",
+        "value": 0,
+        "precision": 1,
+        "name": "name1"
+      }
+    ],
+    "previousStatement": "bound",
+    "colour": "83"
+  },
+  {
+    "type": "OR",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
+        ],
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "field_label",
+        "text": "v",
+        "name": "name2"
+      }
+    ],
+    "message3": "%1",
+    "args3": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
+        ],
+        "name": "name3"
+      }
+    ],
+    "previousStatement": "OR",
+    "colour": "207"
+  },
+  {
+    "type": "AND",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
+        ],
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "field_label",
+        "text": "^",
+        "name": "name2"
+      }
+    ],
+    "message3": "%1",
+    "args3": [
+      {
+        "type": "input_statement",
+        "check": [
+          "aall_but_agentsAndBound"
+        ],
+        "name": "name3"
+      }
+    ],
+    "previousStatement": "AND",
+    "colour": "252"
+  },
+  {
+    "type": "NOT",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "NOT",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
+        ],
+        "name": "name2"
+      }
+    ],
+    "previousStatement": "NOT",
+    "colour": "120"
+  },
+  {
+    "type": "G",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "<<",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "agent"
+        ],
+        "name": "name2"
+      }
+    ],
+    "message3": "%1",
+    "args3": [
+      {
+        "type": "field_label",
+        "text": ">>",
+        "name": "name3"
+      }
+    ],
+    "message4": "%1",
+    "args4": [
+      {
+        "type": "field_label",
+        "text": "<=",
+        "name": "name4"
+      }
+    ],
+    "message5": "%1",
+    "args5": [
+      {
+        "type": "input_statement",
+        "check": [
+          "bound"
+        ],
+        "name": "name5"
+      }
+    ],
+    "message6": "%1",
+    "args6": [
+      {
+        "type": "field_label",
+        "text": "G",
+        "name": "name6"
+      }
+    ],
+    "message7": "%1",
+    "args7": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
+        ],
+        "name": "name7"
+      }
+    ],
+    "previousStatement": "G",
+    "colour": "5"
+  },
+  {
+    "type": "X",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "<<",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "agent"
+        ],
+        "name": "name2"
+      }
+    ],
+    "message3": "%1",
+    "args3": [
+      {
+        "type": "field_label",
+        "text": ">>",
+        "name": "name3"
+      }
+    ],
+    "message4": "%1",
+    "args4": [
+      {
+        "type": "field_label",
+        "text": "<=",
+        "name": "name4"
+      }
+    ],
+    "message5": "%1",
+    "args5": [
+      {
+        "type": "input_statement",
+        "check": [
+          "bound"
+        ],
+        "name": "name5"
+      }
+    ],
+    "message6": "%1",
+    "args6": [
+      {
+        "type": "field_label",
+        "text": "X",
+        "name": "name6"
+      }
+    ],
+    "message7": "%1",
+    "args7": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
+        ],
+        "name": "name7"
+      }
+    ],
+    "previousStatement": "X",
+    "colour": "231"
+  },
+  {
+    "type": "F",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "<<",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "agent"
+        ],
+        "name": "name2"
+      }
+    ],
+    "message3": "%1",
+    "args3": [
+      {
+        "type": "field_label",
+        "text": ">>",
+        "name": "name3"
+      }
+    ],
+    "message4": "%1",
+    "args4": [
+      {
+        "type": "field_label",
+        "text": "<=",
+        "name": "name4"
+      }
+    ],
+    "message5": "%1",
+    "args5": [
+      {
+        "type": "input_statement",
+        "check": [
+          "bound"
+        ],
+        "name": "name5"
+      }
+    ],
+    "message6": "%1",
+    "args6": [
+      {
+        "type": "field_label",
+        "text": "F",
+        "name": "name6"
+      }
+    ],
+    "message7": "%1",
+    "args7": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
+        ],
+        "name": "name7"
+      }
+    ],
+    "previousStatement": "F",
+    "colour": "149"
+  }
+]

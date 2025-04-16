@@ -1,0 +1,62 @@
+[
+    {
+        "type": "collector",
+        "contents":[
+            {
+                "name": "all",
+                "elements": ["atom","AND","OR","NOT","G","X","F","agents","bound"]
+            },
+            {
+                "name": "all_but_agentsAndBound",
+                "elements": ["atom","AND","OR","NOT","G","X","F"]                
+            }
+        ]
+    },
+    {
+        "type": "prototype",
+        "contents": [
+            {
+                "name":"agent",
+                "format":"%string",
+                "connection":"agent"
+            },
+            {
+                "name":"atom",
+                "format":"%string"
+            },
+            {
+                "name":"bound",
+                "format":"%int"
+            }
+        ]
+    },
+    {
+        "type": "advancedtype",
+        "contents":[
+		{
+            "name": "OR",
+            "format":"%['all_but_agentsAndBound'] v %['all_but_agentsAndBound']"
+        },
+        {
+            "name": "AND",
+            "format":"%['all_but_agentsAndBound'] ^ %['aall_but_agentsAndBound']"
+        },
+        {
+            "name": "NOT",
+            "format":"NOT %['all_but_agentsAndBound']"
+        },
+        {
+            "name": "G",
+            "format":"<< %['agent'] >> <= %['bound'] G %['all_but_agentsAndBound']"
+        },
+        {
+            "name": "X",
+            "format":"<< %['agent'] >> <= %['bound'] X %['all_but_agentsAndBound']"
+        },
+        {
+            "name": "F",
+            "format":"<< %['agent'] >> <= %['bound'] F %['all_but_agentsAndBound']"
+        }
+	]
+    }
+]

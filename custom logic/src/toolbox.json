@@ -1,0 +1,51 @@
+[
+    {
+      "kind": "category",
+      "name": "ATL",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "container2"
+        },
+        {
+          "kind": "block",
+          "type": "container3"
+        },
+        {
+          "kind": "block",
+          "type": "container4"
+        },
+        {
+          "kind": "block",
+          "type": "container5"
+        },
+        {
+          "kind": "block",
+          "type": "container6"
+        },
+        {
+          "kind": "block",
+          "type": "container7"
+        },
+        {
+          "kind": "block",
+          "type": "container8"
+        },
+        {
+          "kind": "block",
+          "type": "atoms"
+        },
+        {
+          "kind": "block",
+          "type": "agents"
+        }
+  
+      ]
+    },
+    {
+      "kind": "category",
+      "name": "temp",
+      "contents": [
+      ]
+    }
+]

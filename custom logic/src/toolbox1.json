@@ -1,0 +1,44 @@
+[
+  {
+    "kind": "category",
+    "name": "NATATL.json",
+    "contents": [
+      {
+        "kind": "block",
+        "type": "agent"
+      },
+      {
+        "kind": "block",
+        "type": "atom"
+      },
+      {
+        "kind": "block",
+        "type": "bound"
+      },
+      {
+        "kind": "block",
+        "type": "OR"
+      },
+      {
+        "kind": "block",
+        "type": "AND"
+      },
+      {
+        "kind": "block",
+        "type": "NOT"
+      },
+      {
+        "kind": "block",
+        "type": "G"
+      },
+      {
+        "kind": "block",
+        "type": "X"
+      },
+      {
+        "kind": "block",
+        "type": "F"
+      }
+    ]
+  }
+]
