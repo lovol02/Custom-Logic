@@ -39,7 +39,7 @@
         },
         {
             "name": "AND",
-            "format":"%['all_but_agentsAndBound'] ^ %['aall_but_agentsAndBound']"
+            "format":"%['all_but_agentsAndBound'] ^ %['all_but_agentsAndBound']"
         },
         {
             "name": "NOT",

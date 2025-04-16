@@ -11,7 +11,7 @@
       }
     ],
     "previousStatement": "agent",
-    "colour": "221",
+    "colour": "9",
     "nextStatement": [
       "agent"
     ]
@@ -28,7 +28,7 @@
       }
     ],
     "previousStatement": "atom",
-    "colour": "103"
+    "colour": "120"
   },
   {
     "type": "bound",
@@ -43,7 +43,7 @@
       }
     ],
     "previousStatement": "bound",
-    "colour": "83"
+    "colour": "16"
   },
   {
     "type": "OR",
@@ -89,7 +89,7 @@
       }
     ],
     "previousStatement": "OR",
-    "colour": "207"
+    "colour": "146"
   },
   {
     "type": "AND",
@@ -123,13 +123,19 @@
       {
         "type": "input_statement",
         "check": [
-          "aall_but_agentsAndBound"
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
         ],
         "name": "name3"
       }
     ],
     "previousStatement": "AND",
-    "colour": "252"
+    "colour": "117"
   },
   {
     "type": "NOT",
@@ -159,7 +165,7 @@
       }
     ],
     "previousStatement": "NOT",
-    "colour": "120"
+    "colour": "228"
   },
   {
     "type": "G",
@@ -233,7 +239,7 @@
       }
     ],
     "previousStatement": "G",
-    "colour": "5"
+    "colour": "148"
   },
   {
     "type": "X",
@@ -307,7 +313,7 @@
       }
     ],
     "previousStatement": "X",
-    "colour": "231"
+    "colour": "51"
   },
   {
     "type": "F",
@@ -381,6 +387,6 @@
       }
     ],
     "previousStatement": "F",
-    "colour": "149"
+    "colour": "200"
   }
 ]
