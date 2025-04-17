@@ -10,16 +10,16 @@ const Order = { ATOMIC: 0,};
 
 #the filename is the filename of the input file 
 #that define the features of the custom logic's block
-filename="Logics/Strategy_Logic.json"
-with open(filename,'r') as file:
+Input_filename="Logics/Strategy_Logic.json"
+with open(Input_filename,'r') as file:
     data=json.load(file)
 block_list=[] 
 toolbox_list=[]
 color_list=[]
 single_categories={}  
 single_categories["kind"]="category"
-single_categories["name"]=filename.split('.')[0]
-single_categories["name"]=filename.split('/')[-1]
+single_categories["name"]=Input_filename.split('.')[0]
+single_categories["name"]=Input_filename.split('/')[-1]
 single_categories["contents"]=[]
 collectors={} 
 for elem in data:
@@ -178,7 +178,7 @@ for elem in data:
 toolbox_list.append(single_categories)
 
 print(jsonGenerator)
-with open("./blocks/ATL1.json","w") as file:
+with open("./blocks/blockDefinition.json","w") as file:
     json.dump(block_list,file,indent=2)
 with open("./toolbox1.json","w") as file:
     json.dump(toolbox_list,file,indent=2)

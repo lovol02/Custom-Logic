@@ -1,17 +1,4 @@
-import * as Blockly from 'blockly';
-//let blocks_lsit=["atoms","agents","container","container1","container2","container3","container4","container5","container6","container7","container8"];
-/*
-let blocks_lsit=["atoms","agents","container2","container3","container4","container5","container6","container7","container8"];
-
-function all_but_that(block){
-  return blocks_lsit.filter(item => item !== block)
-}
-
-let all_but_agents = all_but_that("agents");
-*/
-
-/*
-let data = [
+[
   {
     "type": "agent",
     "message0": "agent",
@@ -24,7 +11,7 @@ let data = [
       }
     ],
     "previousStatement": "agent",
-    "colour": "30",
+    "colour": "77",
     "nextStatement": [
       "agent"
     ]
@@ -41,53 +28,21 @@ let data = [
       }
     ],
     "previousStatement": "atom",
-    "colour": "90"
+    "colour": "166"
   },
   {
-    "type": "OR",
-    "message0": " ",
+    "type": "strategy",
+    "message0": "strategy",
     "message1": "%1",
     "args1": [
       {
-        "type": "input_statement",
-        "check": [
-          "atom",
-          "AND",
-          "OR",
-          "NOT",
-          "G",
-          "X",
-          "F"
-        ],
+        "type": "field_input",
+        "text": "",
         "name": "name1"
       }
     ],
-    "message2": "%1",
-    "args2": [
-      {
-        "type": "field_label",
-        "text": "v",
-        "name": "name2"
-      }
-    ],
-    "message3": "%1",
-    "args3": [
-      {
-        "type": "input_statement",
-        "check": [
-          "atom",
-          "AND",
-          "OR",
-          "NOT",
-          "G",
-          "X",
-          "F"
-        ],
-        "name": "name3"
-      }
-    ],
-    "previousStatement": "OR",
-    "colour": "180"
+    "previousStatement": "strategy",
+    "colour": "134"
   },
   {
     "type": "AND",
@@ -99,11 +54,12 @@ let data = [
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name1"
       }
@@ -123,17 +79,18 @@ let data = [
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name3"
       }
     ],
     "previousStatement": "AND",
-    "colour": "63"
+    "colour": "130"
   },
   {
     "type": "NOT",
@@ -153,17 +110,18 @@ let data = [
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name2"
       }
     ],
     "previousStatement": "NOT",
-    "colour": "213"
+    "colour": "148"
   },
   {
     "type": "G",
@@ -171,39 +129,30 @@ let data = [
     "message1": "%1",
     "args1": [
       {
-        "type": "input_statement",
-        "check": [
-          "agent"
-        ],
+        "type": "field_label",
+        "text": "G",
         "name": "name1"
       }
     ],
     "message2": "%1",
     "args2": [
       {
-        "type": "field_label",
-        "text": "G",
-        "name": "name2"
-      }
-    ],
-    "message3": "%1",
-    "args3": [
-      {
         "type": "input_statement",
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
-        "name": "name3"
+        "name": "name2"
       }
     ],
     "previousStatement": "G",
-    "colour": "106"
+    "colour": "179"
   },
   {
     "type": "X",
@@ -211,9 +160,78 @@ let data = [
     "message1": "%1",
     "args1": [
       {
+        "type": "field_label",
+        "text": "X",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
         "type": "input_statement",
         "check": [
-          "agent"
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "previousStatement": "X",
+    "colour": "219"
+  },
+  {
+    "type": "F",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "F",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "previousStatement": "F",
+    "colour": "26"
+  },
+  {
+    "type": "Until",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name1"
       }
@@ -222,7 +240,7 @@ let data = [
     "args2": [
       {
         "type": "field_label",
-        "text": "X",
+        "text": "U",
         "name": "name2"
       }
     ],
@@ -233,20 +251,21 @@ let data = [
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name3"
       }
     ],
-    "previousStatement": "X",
-    "colour": "221"
+    "previousStatement": "Until",
+    "colour": "65"
   },
   {
-    "type": "F",
+    "type": "agents_and_strategy",
     "message0": " ",
     "message1": "%1",
     "args1": [
@@ -261,8 +280,34 @@ let data = [
     "message2": "%1",
     "args2": [
       {
+        "type": "input_statement",
+        "check": [
+          "strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "previousStatement": "agents_and_strategy",
+    "colour": "180"
+  },
+  {
+    "type": "forall",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
         "type": "field_label",
-        "text": "F",
+        "text": "forall",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "strategy"
+        ],
         "name": "name2"
       }
     ],
@@ -271,40 +316,80 @@ let data = [
       {
         "type": "input_statement",
         "check": [
-          "atom",
-          "AND",
-          "OR",
-          "NOT",
-          "G",
-          "X",
-          "F"
+          "agents_and_strategy"
         ],
         "name": "name3"
       }
     ],
-    "previousStatement": "F",
-    "colour": "93"
+    "message4": "%1",
+    "args4": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name4"
+      }
+    ],
+    "previousStatement": "forall",
+    "colour": "232"
+  },
+  {
+    "type": "exist",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "exist",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "message3": "%1",
+    "args3": [
+      {
+        "type": "input_statement",
+        "check": [
+          "agents_and_strategy"
+        ],
+        "name": "name3"
+      }
+    ],
+    "message4": "%1",
+    "args4": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name4"
+      }
+    ],
+    "previousStatement": "exist",
+    "colour": "84"
   }
-];
-
-export const blocks=Blockly.common.createBlockDefinitionsFromJsonArray(data);
-*/
-
-const load_function = async () => {
-  let data = [];
-  try {
-    const response = await fetch('/blocks/blockDefinition.json');
-    data = await response.json();
-    if (data) {
-      return Blockly.common.createBlockDefinitionsFromJsonArray(data);
-    } else {
-      throw new Error('Data is not an array');
-    }
-  } catch (err) {
-    console.error('Failed to load JSON:', err);
-    return null;
-  }
-};
-//If you're using ES6 Modules (i.e., type="module" in the browser 
-// or using .mjs or type="module" in Node.js), top-level await is supported.
-export const blocks =await load_function();
+]
