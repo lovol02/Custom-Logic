@@ -10,7 +10,7 @@ const Order = { ATOMIC: 0,};
 
 #the filename is the filename of the input file 
 #that define the features of the custom logic's block
-filename="Logics/NATATL.json"
+filename="Logics/Strategy_Logic.json"
 with open(filename,'r') as file:
     data=json.load(file)
 block_list=[] 
@@ -90,6 +90,11 @@ for elem in data:
                         code+=f"""+" "+block.getFieldValue('name{count}')"""   
                 elif var[0] == '%' and var[1] == '[':
                     new_dic["type"]="input_statement"
+                    postfix_index=var.find(']')
+                    postfix=""
+                    if postfix_index != len(var)-1:
+                        postfix=var[var.find(']')+1:]
+                        var=var[0:postfix_index+1]
                     #This removes the leading % character from the string.
                     var=var.lstrip('%')
                     #this convert var into a list form, is more safe than eval()
@@ -102,9 +107,9 @@ for elem in data:
                             new_dic["check"].append(elemento) 
                     #new_dic["check"]=var
                     if code =="":
-                        code=f" jsonGenerator.statementToCode(block, 'name{count}').slice(2)"
+                        code=f"""jsonGenerator.statementToCode(block, 'name{count}').slice(2)+"{postfix}" """
                     else:
-                        code+=f"""+" "+jsonGenerator.statementToCode(block, 'name{count}').slice(2)"""
+                        code+=f"""+" "+jsonGenerator.statementToCode(block, 'name{count}').slice(2)+"{postfix}" """
                 else:
                     index=var.find('%')
                     lsign=var[0:index]

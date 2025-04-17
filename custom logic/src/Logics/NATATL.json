@@ -4,7 +4,7 @@
         "contents":[
             {
                 "name": "all",
-                "elements": ["atom","AND","OR","NOT","G","X","F","agents","bound"]
+                "elements": ["atom","AND","OR","NOT","G","X","F","agents","bound","operation_camp"]
             },
             {
                 "name": "all_but_agentsAndBound",
@@ -27,6 +27,10 @@
             {
                 "name":"bound",
                 "format":"%int"
+            },
+            {
+                "name":"operation_camp",
+                "format":"%string"
             }
         ]
     },
@@ -47,15 +51,15 @@
         },
         {
             "name": "G",
-            "format":"<< %['agent'] >> <= %['bound'] G %['all_but_agentsAndBound']"
+            "format":"<< %['agent'] >> %['operation_camp'] %['bound'] G %['all_but_agentsAndBound']"
         },
         {
             "name": "X",
-            "format":"<< %['agent'] >> <= %['bound'] X %['all_but_agentsAndBound']"
+            "format":"<< %['agent'] >> %['operation_camp'] %['bound'] X %['all_but_agentsAndBound']"
         },
         {
             "name": "F",
-            "format":"<< %['agent'] >> <= %['bound'] F %['all_but_agentsAndBound']"
+            "format":"<< %['agent'] >> %['operation_camp'] %['bound'] F %['all_but_agentsAndBound']"
         }
 	]
     }

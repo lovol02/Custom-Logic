@@ -1,0 +1,74 @@
+[
+    {
+        "type": "collector",
+        "contents":[
+            {
+                "name": "all",
+                "elements": ["atom","AND","NOT","G","X","F","agents","strategy","Until","agents_and_strategy"]
+            },
+            {
+                "name": "collector1",
+                "elements": ["atom","AND","NOT","G","X","F","Until","agents_and_strategy"]                
+            }
+        ]
+    },
+    {
+        "type": "prototype",
+        "contents": [
+            {
+                "name":"agent",
+                "format":"%string",
+                "connection":"agent"
+            },
+            {
+                "name":"atom",
+                "format":"%string"
+            },
+            {
+                "name":"strategy",
+                "format":"%string"
+            }
+        ]
+    },
+    {
+        "type": "advancedtype",
+        "contents":[
+        {
+            "name": "AND",
+            "format":"%['collector1'] ^ %['collector1']"
+        },
+        {
+            "name": "NOT",
+            "format":"NOT %['collector1']"
+        },
+        {
+            "name": "G",
+            "format":"G %['collector1']"
+        },
+        {
+            "name": "X",
+            "format":"X %['collector1']"
+        },
+        {
+            "name": "F",
+            "format":"F %['collector1']"
+        },
+        {
+            "name": "Until",
+            "format": "%['collector1'] U %['collector1']"
+        },
+        {
+            "name": "agents_and_strategy",
+            "format":"%['agent'], %['strategy']"
+        },
+        {
+            "name": "forall",
+            "format": "forall %['strategy']. %['agents_and_strategy'] %['collector1']"
+        },
+        {
+            "name": "exist",
+            "format": "exist %['strategy']. %['agents_and_strategy'] %['collector1']"
+        }
+	]
+    }
+]
