@@ -11,7 +11,7 @@
       }
     ],
     "previousStatement": "agent",
-    "colour": "77",
+    "colour": "64",
     "nextStatement": [
       "agent"
     ]
@@ -28,7 +28,7 @@
       }
     ],
     "previousStatement": "atom",
-    "colour": "166"
+    "colour": "171"
   },
   {
     "type": "strategy",
@@ -42,7 +42,7 @@
       }
     ],
     "previousStatement": "strategy",
-    "colour": "134"
+    "colour": "249"
   },
   {
     "type": "AND",
@@ -90,7 +90,7 @@
       }
     ],
     "previousStatement": "AND",
-    "colour": "130"
+    "colour": "51"
   },
   {
     "type": "NOT",
@@ -121,7 +121,7 @@
       }
     ],
     "previousStatement": "NOT",
-    "colour": "148"
+    "colour": "5"
   },
   {
     "type": "G",
@@ -152,7 +152,7 @@
       }
     ],
     "previousStatement": "G",
-    "colour": "179"
+    "colour": "23"
   },
   {
     "type": "X",
@@ -183,7 +183,7 @@
       }
     ],
     "previousStatement": "X",
-    "colour": "219"
+    "colour": "114"
   },
   {
     "type": "F",
@@ -214,7 +214,7 @@
       }
     ],
     "previousStatement": "F",
-    "colour": "26"
+    "colour": "21"
   },
   {
     "type": "Until",
@@ -262,7 +262,7 @@
       }
     ],
     "previousStatement": "Until",
-    "colour": "65"
+    "colour": "170"
   },
   {
     "type": "agents_and_strategy",
@@ -288,7 +288,7 @@
       }
     ],
     "previousStatement": "agents_and_strategy",
-    "colour": "180"
+    "colour": "128"
   },
   {
     "type": "forall",
@@ -339,7 +339,7 @@
       }
     ],
     "previousStatement": "forall",
-    "colour": "232"
+    "colour": "54"
   },
   {
     "type": "exist",
@@ -390,6 +390,6 @@
       }
     ],
     "previousStatement": "exist",
-    "colour": "84"
+    "colour": "234"
   }
 ]

@@ -49,7 +49,9 @@ for elem in data:
                 dic[f"message{count}"]="%1"
                 dic[f"args{count}"]=[]
                 new_dic={}
-                if var == f"%int":
+                if var == ' ':
+                    continue
+                elif var == f"%int":
                     new_dic["type"]="field_number"
                     new_dic["value"]=0
                     new_dic["precision"]=1
@@ -152,7 +154,8 @@ for elem in data:
             if elem1.get('connection'):
                 if elem1["connection"]!="":
                     print(elem1["connection"])
-                    connection_list=elem1["connection"].split(",")
+                    connection_list=elem1["connection"]
+                    connection_list = connection_list if isinstance(connection_list,list) else [connection_list]
                     dic["nextStatement"]=[]
                     dic["nextStatement"]=dic["nextStatement"]+connection_list
                     jsonGenerator+="""
