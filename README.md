@@ -55,7 +55,7 @@ Example:
                 "name": "collector2",
                 "elements": ["second list of elements"]                
             },
-            xxxxx(other list)
+            xxxxx(other collectors)
         ]
     }
 </pre>
@@ -75,7 +75,7 @@ Example for connection:
         {
             "name":"name1",
             "format":"%string",
-            "connection":"name1"
+            "connection":"name1" // If just one element, it also can be inside the [], "connection":["name1"], just declare that our block 'name1' can concatenate with other block name1
         },
         {
             "name":"name2",
@@ -123,11 +123,75 @@ Whole example of the prototype:
     }
 '''</pre>    
 **About connection!!!**   
-If you want a block in some case can be concatenate and some case not, just define two block have same structure, one has connection and another one not, this is a easy way to build a constraint.  
+If you want a block in some case can be concatenate and some case not, just define two block have same structures, one has connection and another one not, this is a easy way to build a constraint.  
 **About differences between prototype and advanced type!!!**  
 Note: the block you defined in the prototype camp in the interpretation phase it will just return the value as it is, not like the advanced type that will start with '(' and closed with ')' , unless you use the connection property, it will close the sequence of block have same 'name' property.  
-And for the prototype you can specify which value represent for this block you are defining, it also can contain the other blocks just respect the syntax to contain the other blocks, but it is not reccomanded, cause it can be solved in the advanced_type, it's better to have a clear division between advanced type and prototype.  
-Third camp is 'advanced_type', in this camp have same operation as prototype, use label and four default value type, the only difference is you can use the %[] to represent a single prototype input variable or an array of prototype or a collector.  
+And for the prototype you can specify which value represent for this block you are defining, it also can contain the other blocks just respect the syntax to contain the other blocks, but it is not reccomanded, cause it can be solved in the 'advancedtype', it's better to have a clear division between advanced type and prototype.  
+Third camp is 'advancedtype', in this camp has same operation as prototype, can use label and four default value type (but the block which has only the default value type is reccomanded to defining it in the prototype instead in the 'advancedtype'), the only difference is in the format you can use the %[] to represent the blocks which is acceptable as input (insert the name of block as you defined), those blocks can be a sequence of prototype, other advanced type, it self, or a collector.
+Example of ATL:  
+<pre>
+[
+    {
+        "type": "collector",
+        "contents":[
+            {
+                "name": "all",
+                "elements": ["atom","AND","OR","NOT","G","X","F","agents"]
+            },
+            {
+                "name": "all_but_agents",
+                "elements": ["atom","AND","OR","NOT","G","X","F"]                
+            }
+        ]
+    },
+    {
+        "type": "prototype",
+        "contents": [
+            {
+                "name":"agent",
+                "format":"%string",
+                "connection":["agent"]
+            },
+            {
+                "name":"atom",
+                "format":"%string"
+            }
+        ]
+    },
+    {
+        "type": "advancedtype",
+        "contents":[
+		{
+            "name": "OR",
+            "format":"%['all_but_agents'] v %['all_but_agents']"
+        },
+        {
+            "name": "AND",
+            "format":"%['all_but_agents'] ^ %['all_but_agents']"
+        },
+        {
+            "name": "NOT",
+            "format":"NOT %['all_but_agents']"
+        },
+        {
+            "name": "G",
+            "format":"<<%['agent']>> G %['all_but_agents']"
+        },
+        {
+            "name": "X",
+            "format":"<<%['agent']>> X %['all_but_agents']"
+        },
+        {
+            "name": "F",
+            "format":"<<%['agent']>> F %['all_but_agents']"
+        }
+	]
+    }
+]
+</pre>
+
+***Note!!!***
+Please let every block and collector has his own name, in the case of the same name for block and collector, it will cause a confusion for our program.
 
 
 
