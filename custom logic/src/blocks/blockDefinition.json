@@ -11,7 +11,7 @@
       }
     ],
     "previousStatement": "agent",
-    "colour": "227",
+    "colour": "158",
     "nextStatement": [
       "agent"
     ]
@@ -28,22 +28,7 @@
       }
     ],
     "previousStatement": "atom",
-    "colour": "27"
-  },
-  {
-    "type": "bound",
-    "message0": "bound",
-    "message1": "%1",
-    "args1": [
-      {
-        "type": "field_number",
-        "value": 0,
-        "precision": 1,
-        "name": "name1"
-      }
-    ],
-    "previousStatement": "bound",
-    "colour": "69"
+    "colour": "79"
   },
   {
     "type": "OR",
@@ -89,7 +74,7 @@
       }
     ],
     "previousStatement": "OR",
-    "colour": "92"
+    "colour": "76"
   },
   {
     "type": "AND",
@@ -123,13 +108,19 @@
       {
         "type": "input_statement",
         "check": [
-          "aall_but_agentsAndBound"
+          "atom",
+          "AND",
+          "OR",
+          "NOT",
+          "G",
+          "X",
+          "F"
         ],
         "name": "name3"
       }
     ],
     "previousStatement": "AND",
-    "colour": "4"
+    "colour": "123"
   },
   {
     "type": "NOT",
@@ -159,7 +150,7 @@
       }
     ],
     "previousStatement": "NOT",
-    "colour": "178"
+    "colour": "199"
   },
   {
     "type": "G",
@@ -167,57 +158,23 @@
     "message1": "%1",
     "args1": [
       {
-        "type": "field_label",
-        "text": "<<",
+        "type": "input_statement",
+        "check": [
+          "agent"
+        ],
         "name": "name1"
       }
     ],
     "message2": "%1",
     "args2": [
       {
-        "type": "input_statement",
-        "check": [
-          "agent"
-        ],
+        "type": "field_label",
+        "text": "G",
         "name": "name2"
       }
     ],
     "message3": "%1",
     "args3": [
-      {
-        "type": "field_label",
-        "text": "^",
-        "name": "name3"
-      }
-    ],
-    "message4": "%1",
-    "args4": [
-      {
-        "type": "input_statement",
-        "check": [
-          "bound"
-        ],
-        "name": "name4"
-      }
-    ],
-    "message5": "%1",
-    "args5": [
-      {
-        "type": "field_label",
-        "text": ">>",
-        "name": "name5"
-      }
-    ],
-    "message6": "%1",
-    "args6": [
-      {
-        "type": "field_label",
-        "text": "G",
-        "name": "name6"
-      }
-    ],
-    "message7": "%1",
-    "args7": [
       {
         "type": "input_statement",
         "check": [
@@ -229,11 +186,11 @@
           "X",
           "F"
         ],
-        "name": "name7"
+        "name": "name3"
       }
     ],
     "previousStatement": "G",
-    "colour": "143"
+    "colour": "139"
   },
   {
     "type": "X",
@@ -241,57 +198,23 @@
     "message1": "%1",
     "args1": [
       {
-        "type": "field_label",
-        "text": "<<",
+        "type": "input_statement",
+        "check": [
+          "agent"
+        ],
         "name": "name1"
       }
     ],
     "message2": "%1",
     "args2": [
       {
-        "type": "input_statement",
-        "check": [
-          "agent"
-        ],
+        "type": "field_label",
+        "text": "X",
         "name": "name2"
       }
     ],
     "message3": "%1",
     "args3": [
-      {
-        "type": "field_label",
-        "text": "^",
-        "name": "name3"
-      }
-    ],
-    "message4": "%1",
-    "args4": [
-      {
-        "type": "input_statement",
-        "check": [
-          "bound"
-        ],
-        "name": "name4"
-      }
-    ],
-    "message5": "%1",
-    "args5": [
-      {
-        "type": "field_label",
-        "text": ">>",
-        "name": "name5"
-      }
-    ],
-    "message6": "%1",
-    "args6": [
-      {
-        "type": "field_label",
-        "text": "X",
-        "name": "name6"
-      }
-    ],
-    "message7": "%1",
-    "args7": [
       {
         "type": "input_statement",
         "check": [
@@ -303,11 +226,11 @@
           "X",
           "F"
         ],
-        "name": "name7"
+        "name": "name3"
       }
     ],
     "previousStatement": "X",
-    "colour": "133"
+    "colour": "44"
   },
   {
     "type": "F",
@@ -315,57 +238,23 @@
     "message1": "%1",
     "args1": [
       {
-        "type": "field_label",
-        "text": "<<",
+        "type": "input_statement",
+        "check": [
+          "agent"
+        ],
         "name": "name1"
       }
     ],
     "message2": "%1",
     "args2": [
       {
-        "type": "input_statement",
-        "check": [
-          "agent"
-        ],
+        "type": "field_label",
+        "text": "F",
         "name": "name2"
       }
     ],
     "message3": "%1",
     "args3": [
-      {
-        "type": "field_label",
-        "text": "^",
-        "name": "name3"
-      }
-    ],
-    "message4": "%1",
-    "args4": [
-      {
-        "type": "input_statement",
-        "check": [
-          "bound"
-        ],
-        "name": "name4"
-      }
-    ],
-    "message5": "%1",
-    "args5": [
-      {
-        "type": "field_label",
-        "text": ">>",
-        "name": "name5"
-      }
-    ],
-    "message6": "%1",
-    "args6": [
-      {
-        "type": "field_label",
-        "text": "F",
-        "name": "name6"
-      }
-    ],
-    "message7": "%1",
-    "args7": [
       {
         "type": "input_statement",
         "check": [
@@ -377,10 +266,10 @@
           "X",
           "F"
         ],
-        "name": "name7"
+        "name": "name3"
       }
     ],
     "previousStatement": "F",
-    "colour": "100"
+    "colour": "202"
   }
 ]

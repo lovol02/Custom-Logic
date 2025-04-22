@@ -202,7 +202,7 @@ toolbox_list.append(single_categories)
 print(jsonGenerator)
 with open("./blocks/blockDefinition.json","w") as file:
     json.dump(block_list,file,indent=2)
-with open("./toolbox1.json","w") as file:
+with open("./toolbox.json","w") as file:
     json.dump(toolbox_list,file,indent=2)
 with open("./generators/json.js","w") as file:
     file.write(jsonGenerator)

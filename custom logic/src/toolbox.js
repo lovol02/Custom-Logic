@@ -15,7 +15,7 @@ listed here.
 const load_function_for_toolbox = async () => {
   let data = [];
   try {
-    const response = await fetch('/toolbox1.json');
+    const response = await fetch('/toolbox.json');
     data = await response.json();
     if (data) {
       return {
