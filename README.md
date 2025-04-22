@@ -13,9 +13,9 @@ After installed the npm, you can simply launch the program at command line of su
 Configuration  
 
 To customize the default logic:​  
-    1. Navigate to the src directory.​  
-    2. Open the jsongenerator.py file.​  
-    3. Modify the Input_filename variable to point to your desired JSON configuration file located in the src/Logics directory or any other path.   
+1. Navigate to the src directory.​  
+2. Open the jsongenerator.py file.​  
+3. Modify the Input_filename variable to point to your desired JSON configuration file located in the src/Logics directory or any other path.   
 
 To create your own logic you can create a new file json in the Logics folder or any other path(just specify the path to file in the camp "Input_filename" of the file jsongenerator.py).  
 
