@@ -26,8 +26,11 @@ var code=block.getFieldValue('name1');
 jsonGenerator.forBlock['atom'] = function(block) {
 var code=block.getFieldValue('name1');
 return code;};
-jsonGenerator.forBlock['strategy'] = function(block) {
-var code=block.getFieldValue('name1');
+jsonGenerator.forBlock['bound'] = function(block) {
+var code=block.getFieldValue('name1').toString();
+return code;};
+jsonGenerator.forBlock['OR'] = function(block) {
+var code='('+jsonGenerator.statementToCode(block, 'name1').slice(2)+"" +" "+block.getFieldValue('name2')+" "+jsonGenerator.statementToCode(block, 'name3').slice(2)+"" +')';
 return code;};
 jsonGenerator.forBlock['AND'] = function(block) {
 var code='('+jsonGenerator.statementToCode(block, 'name1').slice(2)+"" +" "+block.getFieldValue('name2')+" "+jsonGenerator.statementToCode(block, 'name3').slice(2)+"" +')';
@@ -36,23 +39,11 @@ jsonGenerator.forBlock['NOT'] = function(block) {
 var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +')';
 return code;};
 jsonGenerator.forBlock['G'] = function(block) {
-var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +')';
+var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +" "+block.getFieldValue('name3')+" "+jsonGenerator.statementToCode(block, 'name4').slice(2)+"" +" "+block.getFieldValue('name5')+" "+block.getFieldValue('name6')+" "+jsonGenerator.statementToCode(block, 'name7').slice(2)+"" +')';
 return code;};
 jsonGenerator.forBlock['X'] = function(block) {
-var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +')';
+var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +" "+block.getFieldValue('name3')+" "+jsonGenerator.statementToCode(block, 'name4').slice(2)+"" +" "+block.getFieldValue('name5')+" "+block.getFieldValue('name6')+" "+jsonGenerator.statementToCode(block, 'name7').slice(2)+"" +')';
 return code;};
 jsonGenerator.forBlock['F'] = function(block) {
-var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +')';
-return code;};
-jsonGenerator.forBlock['Until'] = function(block) {
-var code='('+jsonGenerator.statementToCode(block, 'name1').slice(2)+"" +" "+block.getFieldValue('name2')+" "+jsonGenerator.statementToCode(block, 'name3').slice(2)+"" +')';
-return code;};
-jsonGenerator.forBlock['agents_and_strategy'] = function(block) {
-var code='('+jsonGenerator.statementToCode(block, 'name1').slice(2)+"," +" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +')';
-return code;};
-jsonGenerator.forBlock['forall'] = function(block) {
-var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"." +" "+jsonGenerator.statementToCode(block, 'name3').slice(2)+"" +" "+jsonGenerator.statementToCode(block, 'name4').slice(2)+"" +')';
-return code;};
-jsonGenerator.forBlock['exist'] = function(block) {
-var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"." +" "+jsonGenerator.statementToCode(block, 'name3').slice(2)+"" +" "+jsonGenerator.statementToCode(block, 'name4').slice(2)+"" +')';
+var code='('+block.getFieldValue('name1')+" "+jsonGenerator.statementToCode(block, 'name2').slice(2)+"" +" "+block.getFieldValue('name3')+" "+jsonGenerator.statementToCode(block, 'name4').slice(2)+"" +" "+block.getFieldValue('name5')+" "+block.getFieldValue('name6')+" "+jsonGenerator.statementToCode(block, 'name7').slice(2)+"" +')';
 return code;};

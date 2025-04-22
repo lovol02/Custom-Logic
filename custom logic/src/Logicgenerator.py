@@ -1,6 +1,25 @@
 import json
 import random
 import ast
+import tkinter as tk
+from tkinter import filedialog
+import sys
+
+# Initialize tkinter root window (it won't be shown)
+root = tk.Tk()
+root.withdraw()  # Hide the root window
+
+# Prompt user to select a file
+file_path = filedialog.askopenfilename(
+    title="Select a file", 
+    filetypes=[("json files", "*.json*")]
+)
+if file_path:
+    Input_filename=file_path
+else:
+    print("file aren't selected properly")
+    sys.exit(1) 
+
 
 jsonGenerator="""
 import * as Blockly from 'blockly';
@@ -10,7 +29,7 @@ const Order = { ATOMIC: 0,};
 
 #the filename is the filename of the input file 
 #that define the features of the custom logic's block
-Input_filename="Logics/Strategy_Logic.json"
+#Input_filename="Logics/Strategy_Logic.json"
 with open(Input_filename,'r') as file:
     data=json.load(file)
 block_list=[] 
