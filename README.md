@@ -12,12 +12,12 @@ The link for npm [download npm](https://docs.npmjs.com/downloading-and-installin
 
 📘Visiting / Use of service:   
 After installation the prerequisites, you can simply launch the program at command line of subdirectory custom logic.   
-Using the command <u>'npm start'</u> to lauch the service, after service lauched open a web page in the browser with address: 127.0.0.1:8080 to start use the service.   
+Using the command '***npm start***' to lauch the service, after service lauched open a web page in the browser with address: 127.0.0.1:8080 to start use the service.   
 
-How to switch the default logics?
-To use the default logic:​  
+How to switch the default logics?  
+To use the default logic:​
 1. Navigate to the src directory.​  
-2. Run this program with command <u>"python .\Logicgenerator.py"</u> and select the logic configuration files, that it can be the default one (in the subdirectory of src, named 'Logics'), or created by you self. 
+2. Run this program with command "***python .\Logicgenerator.py***" and select the logic configuration files, that it can be the default one (in the subdirectory of src, named 'Logics'), or created by you self. 
 
 📦Configuration for the custom logic  
 To create your own logic you can create a new file json in the Logics folder or any other path(just specify the path to file in the camp "Input_filename" of the file jsongenerator.py).  
