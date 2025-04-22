@@ -41,6 +41,7 @@ Example:
 
 First camp is 'collector', you can specify the "type": "collectors" to declare that you are defining the collector, you can define a json array which contain the blocks that you want them be together and use them as a list in the camp named "content".  
 Example:  
+<pre>'''  
     {
         "type": "collector",
         "contents":[
@@ -54,8 +55,9 @@ Example:
             },
             xxxxx(other list)
         ]
-    }  
-
+    }'''
+</pre>
+  
 Second camp is 'prototype', in this camp you also need use "type": "protoytpe" to declare that you are going to define the blocks there are prototype, you can define your prototype blocks in a json array then put this array inside the "content" camp.   
 
 For every element of array you can define "name" -> block's name, "format"-> in prototype case can use the label(just write the word in the string that you want put in the format.) and the four default value type that start with % to represent it is value type: %string, %int, %double(which have precision 0.00), and %bool, about "connection" this camp is defined on your need, if you need your ablock connected to other block just declare this camp and give it an array of blocks that you want the block you are defining to connect to or just one element.  
