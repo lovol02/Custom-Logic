@@ -18,7 +18,7 @@
             {
                 "name":"agent",
                 "format":"%string",
-                "connection":"agent"
+                "connection":["agent","atom"]
             },
             {
                 "name":"atom",

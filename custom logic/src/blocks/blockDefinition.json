@@ -11,9 +11,10 @@
       }
     ],
     "previousStatement": "agent",
-    "colour": "158",
+    "colour": "33",
     "nextStatement": [
-      "agent"
+      "agent",
+      "atom"
     ]
   },
   {
@@ -28,7 +29,7 @@
       }
     ],
     "previousStatement": "atom",
-    "colour": "79"
+    "colour": "8"
   },
   {
     "type": "OR",
@@ -74,7 +75,7 @@
       }
     ],
     "previousStatement": "OR",
-    "colour": "76"
+    "colour": "109"
   },
   {
     "type": "AND",
@@ -120,7 +121,7 @@
       }
     ],
     "previousStatement": "AND",
-    "colour": "123"
+    "colour": "70"
   },
   {
     "type": "NOT",
@@ -150,7 +151,7 @@
       }
     ],
     "previousStatement": "NOT",
-    "colour": "199"
+    "colour": "190"
   },
   {
     "type": "G",
@@ -190,7 +191,7 @@
       }
     ],
     "previousStatement": "G",
-    "colour": "139"
+    "colour": "137"
   },
   {
     "type": "X",
@@ -230,7 +231,7 @@
       }
     ],
     "previousStatement": "X",
-    "colour": "44"
+    "colour": "203"
   },
   {
     "type": "F",
@@ -270,6 +271,6 @@
       }
     ],
     "previousStatement": "F",
-    "colour": "202"
+    "colour": "56"
   }
 ]

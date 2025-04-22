@@ -17,14 +17,14 @@ Using the command <pre>'npm start'</pre> to lauch the service, after service lau
 How to switch the default logics?  
 To use the default logic:​
 1. Navigate to the src directory.​  
-2. Run this program with command <pre>"python .\Logicgenerator.py"</pre> and select the logic configuration files, that it can be the default one (in the subdirectory of src, named 'Logics'), or created by you self. 
+2. Run this program with command <pre>"python .\Logicgenerator.py"</pre> then select the logic configuration files, that it can be the default one (in the subdirectory of src, named 'Logics'), or created by you self. 
 
 📦Configuration for the custom logic  
 To create your own logic you can create a new file json in the Logics folder or any other path, just make sure it has suffix .json.  
 
 In the your own json file you can specify three camp inside a json array, which is "collector", "prototype", "advancedtype"(Of course it not neceessary alway be three, it depends on your need).  
 Example:  
-<pre>'''
+<pre>
 [
     {
         "type": "collector",
@@ -39,11 +39,11 @@ Example:
         xxxxx(any other contents)
     }
 ]
-'''</pre>  
+</pre>  
   
 First camp is 'collector', you can specify the "type": "collectors" to declare that you are defining the collector, you can define a json array which contain the blocks that you want them be together and use them as a list in the camp named "content".  
 Example:  
-<pre>'''  
+<pre>  
     {
         "type": "collector",
         "contents":[
@@ -57,13 +57,47 @@ Example:
             },
             xxxxx(other list)
         ]
-    }'''
+    }
 </pre>
   
 Second camp is 'prototype', in this camp you also need use "type": "protoytpe" to declare that you are going to define the blocks there are prototype, you can define your prototype blocks in a json array then put this array inside the "content" camp.   
 
-For every element of array you can define "name" -> block's name, "format"-> in prototype case can use the label(just write the word in the string that you want put in the format.) and the four default value type that start with % to represent it is value type: %string, %int, %double(which have precision 0.00), and %bool, about "connection" this camp is defined on your need, if you need your ablock connected to other block just declare this camp and give it an array of blocks that you want the block you are defining to connect to or just one element.  
-Example:
+For every element of array you can define "name" as block's name, "format" as the final string format you want obtain when you are using this block.  
+In prototype case can use the label(just write the word in the string that you want put in the format.) and the four default value type that start with % to represent it is value type.
+- %string
+- %int
+- %double(which have precision 0.00)
+- %bool
+About "connection" this camp is defined on your need (so it is not necessary to be defined every time), if you need your ablock connected to other block just declare this camp and give it an array of blocks that you want the block you are defining to connect to or just one element.
+Example for connection:  
+<pre>
+    [
+        {
+            "name":"name1",
+            "format":"%string",
+            "connection":"name1"
+        },
+        {
+            "name":"name2",
+            "format":"%string"
+        }
+    ]
+</pre> 
+Or  
+<pre>
+    [
+        {
+            "name":"name1",
+            "format":"%string",
+            "connection":["name1","name2"]
+        },
+        {
+            "name":"name2",
+            "format":"%string"
+        }
+    ]
+</pre> 
+Whole example of the prototype:
 <pre>'''  
     {
         "type": "prototype",
