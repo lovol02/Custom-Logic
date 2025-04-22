@@ -4,6 +4,7 @@ This is a project aimed to represent the various logic into blocks form, thanks 
 - Visual representation of logic structures using Blockly  
 - Customizable logic blocks through JSON configurations  
 - Easy integration and setup with Node.js and npm  
+
 Prerequisites:  
 - Node.js and npm installed on your machine  
 
