@@ -11,7 +11,7 @@
       }
     ],
     "previousStatement": "agent",
-    "colour": "129",
+    "colour": "6",
     "nextStatement": [
       "agent"
     ]
@@ -28,53 +28,21 @@
       }
     ],
     "previousStatement": "atom",
-    "colour": "9"
+    "colour": "59"
   },
   {
-    "type": "OR",
-    "message0": " ",
+    "type": "strategy",
+    "message0": "strategy",
     "message1": "%1",
     "args1": [
       {
-        "type": "input_statement",
-        "check": [
-          "atom",
-          "AND",
-          "OR",
-          "NOT",
-          "G",
-          "X",
-          "F"
-        ],
+        "type": "field_input",
+        "text": "",
         "name": "name1"
       }
     ],
-    "message2": "%1",
-    "args2": [
-      {
-        "type": "field_label",
-        "text": "v",
-        "name": "name2"
-      }
-    ],
-    "message3": "%1",
-    "args3": [
-      {
-        "type": "input_statement",
-        "check": [
-          "atom",
-          "AND",
-          "OR",
-          "NOT",
-          "G",
-          "X",
-          "F"
-        ],
-        "name": "name3"
-      }
-    ],
-    "previousStatement": "OR",
-    "colour": "249"
+    "previousStatement": "strategy",
+    "colour": "74"
   },
   {
     "type": "AND",
@@ -86,11 +54,12 @@
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name1"
       }
@@ -110,17 +79,18 @@
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name3"
       }
     ],
     "previousStatement": "AND",
-    "colour": "202"
+    "colour": "52"
   },
   {
     "type": "NOT",
@@ -140,17 +110,18 @@
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name2"
       }
     ],
     "previousStatement": "NOT",
-    "colour": "82"
+    "colour": "230"
   },
   {
     "type": "G",
@@ -158,39 +129,30 @@
     "message1": "%1",
     "args1": [
       {
-        "type": "input_statement",
-        "check": [
-          "agent"
-        ],
+        "type": "field_label",
+        "text": "G",
         "name": "name1"
       }
     ],
     "message2": "%1",
     "args2": [
       {
-        "type": "field_label",
-        "text": "G",
-        "name": "name2"
-      }
-    ],
-    "message3": "%1",
-    "args3": [
-      {
         "type": "input_statement",
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
-        "name": "name3"
+        "name": "name2"
       }
     ],
     "previousStatement": "G",
-    "colour": "58"
+    "colour": "244"
   },
   {
     "type": "X",
@@ -198,9 +160,78 @@
     "message1": "%1",
     "args1": [
       {
+        "type": "field_label",
+        "text": "X",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
         "type": "input_statement",
         "check": [
-          "agent"
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "previousStatement": "X",
+    "colour": "149"
+  },
+  {
+    "type": "F",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "F",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "previousStatement": "F",
+    "colour": "63"
+  },
+  {
+    "type": "Until",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name1"
       }
@@ -209,7 +240,7 @@
     "args2": [
       {
         "type": "field_label",
-        "text": "X",
+        "text": "U",
         "name": "name2"
       }
     ],
@@ -220,20 +251,21 @@
         "check": [
           "atom",
           "AND",
-          "OR",
           "NOT",
           "G",
           "X",
-          "F"
+          "F",
+          "Until",
+          "agents_and_strategy"
         ],
         "name": "name3"
       }
     ],
-    "previousStatement": "X",
-    "colour": "20"
+    "previousStatement": "Until",
+    "colour": "211"
   },
   {
-    "type": "F",
+    "type": "agents_and_strategy",
     "message0": " ",
     "message1": "%1",
     "args1": [
@@ -248,8 +280,34 @@
     "message2": "%1",
     "args2": [
       {
+        "type": "input_statement",
+        "check": [
+          "strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "previousStatement": "agents_and_strategy",
+    "colour": "72"
+  },
+  {
+    "type": "forall",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
         "type": "field_label",
-        "text": "F",
+        "text": "forall",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "strategy"
+        ],
         "name": "name2"
       }
     ],
@@ -258,18 +316,80 @@
       {
         "type": "input_statement",
         "check": [
-          "atom",
-          "AND",
-          "OR",
-          "NOT",
-          "G",
-          "X",
-          "F"
+          "agents_and_strategy"
         ],
         "name": "name3"
       }
     ],
-    "previousStatement": "F",
-    "colour": "134"
+    "message4": "%1",
+    "args4": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name4"
+      }
+    ],
+    "previousStatement": "forall",
+    "colour": "228"
+  },
+  {
+    "type": "exist",
+    "message0": " ",
+    "message1": "%1",
+    "args1": [
+      {
+        "type": "field_label",
+        "text": "exist",
+        "name": "name1"
+      }
+    ],
+    "message2": "%1",
+    "args2": [
+      {
+        "type": "input_statement",
+        "check": [
+          "strategy"
+        ],
+        "name": "name2"
+      }
+    ],
+    "message3": "%1",
+    "args3": [
+      {
+        "type": "input_statement",
+        "check": [
+          "agents_and_strategy"
+        ],
+        "name": "name3"
+      }
+    ],
+    "message4": "%1",
+    "args4": [
+      {
+        "type": "input_statement",
+        "check": [
+          "atom",
+          "AND",
+          "NOT",
+          "G",
+          "X",
+          "F",
+          "Until",
+          "agents_and_strategy"
+        ],
+        "name": "name4"
+      }
+    ],
+    "previousStatement": "exist",
+    "colour": "227"
   }
 ]

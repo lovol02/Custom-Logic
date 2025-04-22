@@ -6,9 +6,11 @@ This is a project aimed to represent the various logic into blocks form, thanks 
 - 🛠️Easy integration and setup with Node.js and npm  
 
 🛠️Prerequisites:  
-- Node.js and npm installed on your device  
+- Node.js and npm installed on your device, for web service
+- Python installed for the part of creation of custom logic
 The link for Nodejs [download Nodejs](https://nodejs.org/en/download)  
 The link for npm [download npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)  
+The link for python [download python](https://www.python.org/downloads/)  
 
 📘Visiting / Use of service:   
 After installation the prerequisites, you can simply launch the program at command line of subdirectory custom logic.   
