@@ -1,18 +1,19 @@
 # Custom-Logic
 Custom-Logic is a web-based tool that represents various logic structures using Google's Blockly library. Built on Node.js, it allows users to create, visualize, and manage logic blocks efficiently.
 This is a project aimed to represent the various logic into blocks form, thanks the tool Features:  
-- Visual representation of logic structures using Blockly  
-- Customizable logic blocks through JSON configurations  
-- Easy integration and setup with Node.js and npm  
+- 📘Visual representation of logic structures using Blockly  
+- 📦Customizable logic blocks through JSON configurations  
+- 🛠️Easy integration and setup with Node.js and npm  
 
-Prerequisites:  
-- Node.js and npm installed on your machine  
+🛠️Prerequisites:  
+- Node.js and npm installed on your device  
+The link for Nodejs [download Nodejs](https://nodejs.org/en/download)  
+The link for npm [download npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)  
+📘Visiting / Use of service:   
+After installation the prerequisites, you can simply launch the program at command line of subdirectory custom logic.   
+Using the command 'npm start' to lauch the service, after service lauched open a web page in the browser with address: 127.0.0.1:8080 to start use the service.   
 
-here is the link for npm [download npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)  
-After installed the npm, you can simply launch the program at command line of subdirectory custom logic. Using command 'npm start', to start the service.  
-
-Configuration  
-
+📦Configuration for the custom logic   
 To customize the default logic:​  
 1. Navigate to the src directory.​  
 2. Open the jsongenerator.py file.​  
