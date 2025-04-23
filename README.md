@@ -19,7 +19,7 @@ Using the command <pre>'npm start'</pre> to lauch the service, after service lau
 How to switch the default logics?  
 To use the default logic:​
 1. Navigate to the src directory.​  
-2. Run this program with command <pre>"python .\Logicgenerator.py"</pre> then select the logic configuration files, that it can be the default one (in the subdirectory of src, named 'Logics'), or created by you self.Or you can just modify the variable named 'Input_filename' path it as where the file of input is.   
+2. Run this program with command <pre>"python Logicgenerator.py"</pre> then select the file that specify the block configuration for the logic you want use, that it can be the default one (in the subdirectory of src, named 'Logics'), or created by you self. 
 
 📦Configuration for the custom logic  
 To create your own logic you can create a new file json in the Logics folder or any other path, just make sure it has suffix .json.  
