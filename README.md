@@ -73,7 +73,7 @@ In prototype case can use the label(just write the word in the string that you w
 - %string
 - %int
 - %double(which have precision 0.00)
-- %bool
+- %bool  
 About "connection" this camp is defined on your need (so it is not necessary to be defined every time), if you need your ablock connected to other block just declare this camp and give it an array of blocks that you want the block you are defining to connect to or just one element.
 Example for connection:  
 <pre>
