@@ -1,7 +1,7 @@
 [
   {
     "kind": "category",
-    "name": "Strategy_Logic.json",
+    "name": "ATL.json",
     "contents": [
       {
         "kind": "block",
@@ -13,7 +13,7 @@
       },
       {
         "kind": "block",
-        "type": "strategy"
+        "type": "OR"
       },
       {
         "kind": "block",
@@ -34,22 +34,6 @@
       {
         "kind": "block",
         "type": "F"
-      },
-      {
-        "kind": "block",
-        "type": "Until"
-      },
-      {
-        "kind": "block",
-        "type": "agents_and_strategy"
-      },
-      {
-        "kind": "block",
-        "type": "forall"
-      },
-      {
-        "kind": "block",
-        "type": "exist"
       }
     ]
   }

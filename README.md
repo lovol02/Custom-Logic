@@ -20,14 +20,13 @@ How to switch the default logics?
 To use the default logic:​
 1. Navigate to the src directory.​  
 2. Run this program with command <pre>"python Logicgenerator.py"</pre> then select the file that specify the block configuration for the logic you want use, that it can be the default one (in the subdirectory of src, named 'Logics'), or created by you self.  
-***Important***  
-Please clear the workspace first before change the logics, otherwise you have to modify the storageKey variable in the **"serialization.js"** to avoid the error occured during the change. You can use  <pre>window.localStorage.removeItem('yourKey');</pre>  to remove a specific key, or use <pre>localStorage.clear();</pre>  to clear all the keys.    
+
 
 
 📦Configuration for the custom logic  
 To create your own logic you can create a new file json in the Logics folder or any other path, just make sure it has suffix .json.  
 
-In the your own json file you can specify three camp inside a json array, which is "collector", "prototype", "advancedtype"(Of course it not neceessary alway be three, it depends on your need).  
+In the your own json file you can specify three camp inside a **json array** (Must use a json array "[ ]" to contain those element, even you just want define one of them.), those camps are "collector", "prototype", "advancedtype"(Of course it not neceessary alway be three, it depends on your need, just remember they are inside a json array).  
 Example:  
 <pre>
 [
@@ -49,6 +48,7 @@ Example:
 First camp is 'collector', you can specify the "type": "collectors" to declare that you are defining the collector, you can define a json array which contain the blocks that you want them be together and use them as a list in the camp named "content".  
 Example:  
 <pre>  
+[
     {
         "type": "collector",
         "contents":[
@@ -63,6 +63,7 @@ Example:
             xxxxx(other collectors)
         ]
     }
+]
 </pre>
   
 Second camp is 'prototype', in this camp you also need use "type": "protoytpe" to declare that you are going to define the blocks there are prototype, you can define your prototype blocks in a json array then put this array inside the "content" camp.   

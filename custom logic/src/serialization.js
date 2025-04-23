@@ -5,7 +5,7 @@
  */
 
 import * as Blockly from 'blockly/core';
-
+window.localStorage.removeItem('CustomLogicWorkspace');
 const storageKey = 'CustomLogicWorkspace';
 
 /**
