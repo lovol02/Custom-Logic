@@ -131,9 +131,13 @@ Whole example of the prototype:
 **About connection!!!**   
 If you want a block in some case can be concatenate and some case not, just define two block have same structures, one has connection and another one not, this is a easy way to build a constraint.  
 **About differences between prototype and advanced type!!!**  
-Note: the block you defined in the prototype camp in the interpretation phase it will just return the value as it is, not like the advanced type that will start with '(' and closed with ')' , unless you use the connection property, it will close the sequence of block have same 'name' property.  
-And for the prototype you can specify which value represent for this block you are defining, it also can contain the other blocks just respect the syntax to contain the other blocks, but it is not reccomanded, cause it can be solved in the 'advancedtype', it's better to have a clear division between advanced type and prototype.  
-Third camp is 'advancedtype', in this camp has same operation as prototype, can use label and four default value type (but the block which has only the default value type is reccomanded to defining it in the prototype instead in the 'advancedtype'), the only difference is in the format you can use the %[] to represent the blocks which is acceptable as input (insert the name of block as you defined), those blocks can be a sequence of prototype, other advanced type, it self, or a collector.
+- Prototype perfer the value as the input content
+- Advanced type prefer the block as the input content
+- The block you defined in the prototype camp in the interpretation phase it will just return the value as it is  
+- The advanced type that will start with '(' and closed with ')'
+- If you use the connection property, the sequence of block have same 'name' property will grouping with a '(  )'.  
+For the prototype it also can contain the other blocks just respect the syntax to contain the other blocks, but it is not reccomanded, cause it can be solved in the 'advancedtype', it's better to have a clear division between advanced type and prototype.  
+Third camp is 'advancedtype', in this camp has same operation as prototype, can use label and four default value type (but the block which has only the default value type is reccomanded to defining it in the prototype instead in the 'advancedtype'), the only difference is in the format you can use the %[] to represent the list of blocks which is acceptable as input (insert the name of block as you defined), those blocks can be a sequence of prototype, other advanced type, it self, or a collector.
 Example of ATL:  
 <pre>
 [
@@ -142,7 +146,7 @@ Example of ATL:
         "contents":[
             {
                 "name": "all",
-                "elements": ["atom","AND","OR","NOT","G","X","F","agents"]
+                "elements": ["atom","AND","OR","NOT","G","X","F","agent"]
             },
             {
                 "name": "all_but_agents",
