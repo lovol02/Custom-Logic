@@ -205,5 +205,5 @@ Please let every block and collector has his own name, in the case of the same n
 
 ## License and Credits  
 This project uses Blockly, licensed under the Apache License 2.0.  
-Link for Blockly's repository: https://github.com/google/blockly/tree/develop(https://github.com/google/blockly/tree/develop)  
+Link for Blockly's repository: https://github.com/google/blockly/tree/develop
 
