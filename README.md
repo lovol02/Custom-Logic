@@ -1,4 +1,5 @@
-# Custom-Logic
+# Custom-Logic  
+## License and Credits  
 This project uses Blockly, licensed under the Apache License 2.0.  
 Custom-Logic is a web-based tool that represents various logic structures using Google's Blockly library. Built on Node.js, it allows users to create, visualize, and manage logic blocks efficiently.
 This is a project aimed to represent the various logic into blocks form, thanks the tool Features:  
