@@ -1,6 +1,4 @@
-# Custom-Logic  
-## License and Credits  
-This project uses Blockly, licensed under the Apache License 2.0.  
+# Custom-Logic    
 Custom-Logic is a web-based tool that represents various logic structures using Google's Blockly library. Built on Node.js, it allows users to create, visualize, and manage logic blocks efficiently.
 This is a project aimed to represent the various logic into blocks form, thanks the tool Features:  
 - 📘Visual representation of logic structures using Blockly  
@@ -205,5 +203,6 @@ Example of ATL:
 ***Note!!!***
 Please let every block and collector has his own name, in the case of the same name for block and collector, it will cause a confusion for our program.
 
-
+## License and Credits  
+This project uses Blockly, licensed under the Apache License 2.0.
 
