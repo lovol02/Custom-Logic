@@ -204,5 +204,6 @@ Example of ATL:
 Please let every block and collector has his own name, in the case of the same name for block and collector, it will cause a confusion for our program.
 
 ## License and Credits  
-This project uses Blockly, licensed under the Apache License 2.0.
+This project uses Blockly, licensed under the Apache License 2.0.  
+Link for Blockly's repository: https://github.com/google/blockly/tree/develop(https://github.com/google/blockly/tree/develop)  
 
